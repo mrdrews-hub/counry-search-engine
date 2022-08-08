@@ -33,7 +33,10 @@ const fetchCountry = async () => {
 watchEffect(fetchCountry)
 </script>
 <template>
-<div class="container mx-auto px-2 md:px-0" v-if="!loading">
+<div v-if="loading" class="absolute inset-0 flex justify-center items-center">
+  <LoadingSpinner></LoadingSpinner>
+</div>
+<div class="container mx-auto px-2 md:px-0" v-else>
 <ButtonLink>
   <template #icon>
     <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,6 +66,7 @@ watchEffect(fetchCountry)
         </svg>
       </template>
     </SimpleCard>
+
     <SimpleCard>
       <template #card-body>
         <div class="flex flex-col gap-y-2">
@@ -73,6 +77,7 @@ watchEffect(fetchCountry)
       </template>
     </SimpleCard>
   </div>
+
   <div class="card-container flex flex-col md:flex-row gap-6 mt-8">
     <SimpleCard 
       title="Calling Code"
@@ -89,7 +94,6 @@ watchEffect(fetchCountry)
         </ToolTip>
       </template>
     </SimpleCard>
-
 
     <SimpleCard 
       title="Currency"
@@ -108,9 +112,6 @@ watchEffect(fetchCountry)
     </SimpleCard>
   </div>
 </section>
-</div>
-<div v-else class="absolute inset-0 flex justify-center items-center">
-  <LoadingSpinner></LoadingSpinner>
 </div>
 </template>
 <style scoped>
