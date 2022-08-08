@@ -114,30 +114,3 @@ watchEffect(fetchCountry)
 </section>
 </div>
 </template>
-<style scoped>
-#tooltip {
-  background: #525252;
-  color: white;
-  font-size: 14px;
-  border-radius: 14px;
-  display: none;
-}
-#tooltip[data-show] {
-  display: block;
-}
-#tooltip[data-popper-placement^='top'] > #arrow {
-  bottom: -4px;
-}
-
-#tooltip[data-popper-placement^='bottom'] > #arrow {
-  top: -4px;
-}
-
-#tooltip[data-popper-placement^='left'] > #arrow {
-  right: -4px;
-}
-
-#tooltip[data-popper-placement^='right'] > #arrow {
-  left: -4px;
-}
-</style>
