@@ -6,6 +6,3 @@
 body {
   font-family: 'Inter', sans-serif;
 }
-.tooltip {
-  @apply bg-slate-500
-}
