@@ -19,6 +19,8 @@ watch(keyword, async() => {
       if(response.status === 200 && response.statusText === 'OK') {
         isError.value = false
         result.value = response.data
+      } else {
+        isError.value = true
       }
     } catch (error) {
       isError.value = true
@@ -71,15 +73,15 @@ onMounted(() => {
   </div>
 
   <div class="result mt-1">
-    <ul class="menu bg-white shadow-md max-w-2xl mx-auto h-max max-h-80 overflow-auto" v-if="result.length > 0">
-      <template v-if="!isError">
+    <ul class="menu bg-white shadow-md max-w-2xl mx-auto h-max max-h-80 overflow-auto" >
+      <template v-if="result.length > 0 && !isError">
         <li v-for="country in result" :key="country.name">
           <a @click="navigate(country.name)">{{country.name}}</a>
         </li>
       </template>
       <template v-else>
         <li>
-          <p class="text-red-500">Data not found</p>
+          <p class="text-red-500 text-left" :class="{ 'inline': isError, 'hidden': !isError  }">Data not found</p>
         </li>
       </template>
     </ul>
