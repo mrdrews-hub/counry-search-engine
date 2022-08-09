@@ -5,5 +5,5 @@ const props = defineProps({
 </script>
 
 <template>
-<span class="badge badge-md px-4 h-6 bg-secondary border-none shadow-sm text-white">{{  props.text }}</span>
+  <span class="badge badge-md px-4 h-6 bg-secondary border-none shadow-sm text-white">{{  props.text }}</span>
 </template>

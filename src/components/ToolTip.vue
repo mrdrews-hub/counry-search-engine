@@ -66,10 +66,10 @@ const hideTooltips = (e) => {
 <div>
   <p>
     <a href="#" class="text-primary underline" 
-          @mouseenter="showTooltips($event)"
-          @focus="showTooltips($event)" 
-          @mouseleave="hideTooltips($event)" 
-          @blur="hideTooltips($event)">{{ props.tooltipText }}</a> <slot></slot>
+      @mouseenter="showTooltips($event)"
+      @focus="showTooltips($event)" 
+      @mouseleave="hideTooltips($event)" 
+      @blur="hideTooltips($event)">{{ props.tooltipText }}</a> <slot></slot>
   </p>
   <div id="tooltip" role="tooltip" class="bg-neutral text-white text-sm rounded-lg hidden">
     <slot name="content"></slot>
