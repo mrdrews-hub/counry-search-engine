@@ -41,8 +41,8 @@ onMounted(() => {
 </script>
 <template>
 <div class="search">
-  <div class="search flex items-center justify-center relative max-w-xl mx-auto px-2 md:px-0">
-    <input type="text" placeholder="Type any country name" class="peer input input-md w-full input-bordered focus:outline-2 focus:outline-primary" v-model="keyword" ref="searchInput"/>
+  <div class="search flex items-center justify-center relative max-w-2xl mx-auto px-2 md:px-0">
+    <input type="text" placeholder="Type any country name" class="peer input input-xl w-full input-bordered text-lg focus:outline-2 focus:outline-primary placeholder:text-gray-300" v-model="keyword" ref="searchInput"/>
       <!-- Loading -->
       <svg
         version="1.1"
@@ -53,12 +53,12 @@ onMounted(() => {
         x="0px" y="0px" width="45" height="45" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve" v-if="loading">
         <path d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
           <animateTransform 
-            attributeName="transform" 
-            attributeType="XML" 
+            attributeName="transform"
+            attributeType="XML"
             type="rotate"
-            dur="1s" 
+            dur="1s"
             from="0 50 50"
-            to="360 50 50" 
+            to="360 50 50"
             repeatCount="indefinite" />
         </path>
     </svg>
@@ -71,7 +71,7 @@ onMounted(() => {
   </div>
 
   <div class="result mt-1">
-    <ul class="menu bg-white shadow-md max-w-xl mx-auto h-max max-h-80 overflow-auto" v-if="result.length > 0">
+    <ul class="menu bg-white shadow-md max-w-2xl mx-auto h-max max-h-80 overflow-auto" v-if="result.length > 0">
       <template v-if="!isError">
         <li v-for="country in result" :key="country.name.common">
           <a @click="navigate(country.name.common)">{{country.name.common}}</a>
