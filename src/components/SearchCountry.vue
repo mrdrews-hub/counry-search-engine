@@ -15,7 +15,7 @@ watch(keyword, async() => {
   if(keyword.value.length > 0) {
     loading.value = true
     try {
-      const response = await axios.get(`https://restcountries.com/v3.1/name/${keyword.value}`)
+      const response = await axios.get(`https://restcountries.com/v2/name/${keyword.value}`)
       if(response.status === 200 && response.statusText === 'OK') {
         isError.value = false
         result.value = response.data
@@ -73,8 +73,8 @@ onMounted(() => {
   <div class="result mt-1">
     <ul class="menu bg-white shadow-md max-w-2xl mx-auto h-max max-h-80 overflow-auto" v-if="result.length > 0">
       <template v-if="!isError">
-        <li v-for="country in result" :key="country.name.common">
-          <a @click="navigate(country.name.common)">{{country.name.common}}</a>
+        <li v-for="country in result" :key="country.name">
+          <a @click="navigate(country.name)">{{country.name}}</a>
         </li>
       </template>
       <template v-else>
