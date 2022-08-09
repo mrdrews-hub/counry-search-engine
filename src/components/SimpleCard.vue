@@ -3,7 +3,6 @@ const props = defineProps({
   title: String,
   content: [String, Number]
 })
-console.log(props.content);
 </script>
 
 <template>
