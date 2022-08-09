@@ -1,7 +1,42 @@
-# Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Country Search Engine
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+
+## Screenshots
+
+![App Screenshot](https://i.ibb.co/7KN9Gtt/unknown-2022-08-08-23-37-2.png)
+![App Screenshot](https://i.ibb.co/ZLnCnk0/unknown-2022-08-08-23-38.png)
+
+
+## Run Project Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/mrdrews-hub/counry-search-engine.git
+```
+
+Go to the project directory
+
+```bash
+  cd counry-search-engine
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start
+
+```bash
+  npm run dev
+```
+
+
+## Tech Stack
+
+**Client:** VueJS, daisyUI
+
